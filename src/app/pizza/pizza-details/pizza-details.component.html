@@ -1,0 +1,17 @@
+
+<div class="row">
+    <div class="col-sm-6">
+        <br>
+        <h3>{{pizza.name}}, ${{pizza.price}}</h3>
+        <hr>
+        <div>
+            <span [ngClass]="{'text-success': pizza.grade > 4}"><button class="btn btn-danger">{{pizza.grade}}</button></span><br>
+            <small>{{pizza.description}}</small>
+        </div>
+    </div>
+    <div class="col-sm-6 my-auto">      
+        <button class="btn btn-link" [routerLink]="['/pizzas/', pizza._id]">Edit</button>
+        <button class="btn btn-link" (click)="onRemove(pizza._id)">Remove</button>
+    </div>   
+</div>
+
